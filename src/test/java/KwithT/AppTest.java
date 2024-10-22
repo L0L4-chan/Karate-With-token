@@ -36,4 +36,25 @@ public class AppTest
     Karate testListBooking() {
         return Karate.run("getListofBooking.feature").relativeTo(getClass());
     }
+
+     
+    @Karate.Test
+    Karate testgetBooking() {
+        return Karate.run("getBooking.feature").relativeTo(getClass());
+    }
+   
+    @Karate.Test
+    Karate testfaildeleteBooking() {
+        return Karate.run("failDeleteBooking.feature").relativeTo(getClass());
+    }
+    
+    @Karate.Test
+    Karate testdeleteBooking() {
+        return Karate.run("deleteBooking.feature").relativeTo(getClass());
+    }
+
+    @Karate.Test
+    Karate testModifyBooking() {
+        return Karate.run("ModifyBooking.feature").relativeTo(getClass());
+    }
 }

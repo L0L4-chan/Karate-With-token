@@ -26,7 +26,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>KwithT.Booking</title>
+    <title>KwithT.failDeleteBooking</title>
   </head>
   <body>
     <div id="root-container">
@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2024-10-22 12:41:35 PM</div>
+    <div>2024-10-22 12:41:41 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:7]"><span>[1:7]</span> <span>make a booking</span></a>
+            <a href="#[1:7]"><span>[1:7]</span> <span>Delete booking</span></a>
           </div>
         </div>
       </div>
@@ -64,8 +64,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">KwithT/Booking.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Create a booking</span>
+          <span class="feature-path">KwithT/failDeleteBooking.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Fail delete booking</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
@@ -76,12 +76,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[1:7]</span>
-                <span class="scenario-name">make a booking</span>
+                <span class="scenario-name">Delete booking</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1566</span>
+              <span>ms:</span>&nbsp;<span>646</span>
             </div>
           </div>
           <div class="step-row">
@@ -104,7 +104,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>call read(&#39;classpath:config.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">10</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -123,7 +123,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">config</div>
       </div>
-      <div class="time-cell passed">3</div>
+      <div class="time-cell passed">2</div>
     </div>
     <div>
       <div><div>
@@ -225,7 +225,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url dom + &#39;/booking&#39;</span>
+        <span>*</span>&nbsp;<span>url dom + &#39;/booking/998&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -253,10 +253,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">8</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+        <span>Given</span>&nbsp;<span>method delete</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">636</div>
   </div>
 
    
@@ -265,7 +265,30 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.8">12:41:41.100 request:
+1 &gt; DELETE https://restful-booker.herokuapp.com/booking/998
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+12:41:41.734 response time in milliseconds: 633
+1 &lt; 403
+1 &lt; Server: Cowboy
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1729593701&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=TcUAEwzthDLE8r57foRdITo6Dq5wIE1NwkRdqy3mZik%3D&quot;}]}
+1 &lt; Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1729593701&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=TcUAEwzthDLE8r57foRdITo6Dq5wIE1NwkRdqy3mZik%3D
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 9
+1 &lt; Etag: W/&quot;9-PatfYBLj4Um1qTm5zrukoLhNyPU&quot;
+1 &lt; Date: Tue, 22 Oct 2024 10:41:41 GMT
+1 &lt; Via: 1.1 vegur
+Forbidden
+
+</div>   
 
   
 
@@ -281,145 +304,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref passed">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>request {firstname: &#39;Jim&#39;,lastname: &#39;Brown&#39;,totalprice: 111, depositpaid: true, bookingdates:{ checkin: &#39;2018-01-01&#39;, checkout: &#39;2019-01-01&#39;},additionalneeds: &#39;Breakfast&#39;}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1553</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.12">12:41:34.419 request:
-1 &gt; POST https://restful-booker.herokuapp.com/booking
-1 &gt; Accept: */*
-1 &gt; Accept-Encoding: gzip, deflate, br
-1 &gt; Connection: keep-alive
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 168
-1 &gt; Host: restful-booker.herokuapp.com
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.4)
-{&quot;firstname&quot;:&quot;Jim&quot;,&quot;lastname&quot;:&quot;Brown&quot;,&quot;totalprice&quot;:111,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2018-01-01&quot;,&quot;checkout&quot;:&quot;2019-01-01&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}
-
-12:41:35.968 response time in milliseconds: 1548
-1 &lt; 200
-1 &lt; Server: Cowboy
-1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1729593695&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=5vLycBocDI0%2FR6jlgyZiN7gqzpf%2Bd8vp5%2BzIFLii68w%3D&quot;}]}
-1 &lt; Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1729593695&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=5vLycBocDI0%2FR6jlgyZiN7gqzpf%2Bd8vp5%2BzIFLii68w%3D
-1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 196
-1 &lt; Etag: W/&quot;c4-bwuiEufsp3xPNiUC+QnW15HSoAU&quot;
-1 &lt; Date: Tue, 22 Oct 2024 10:41:35 GMT
-1 &lt; Via: 1.1 vegur
-{&quot;bookingid&quot;:487,&quot;booking&quot;:{&quot;firstname&quot;:&quot;Jim&quot;,&quot;lastname&quot;:&quot;Brown&quot;,&quot;totalprice&quot;:111,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2018-01-01&quot;,&quot;checkout&quot;:&quot;2019-01-01&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>Then</span>&nbsp;<span>status 403</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
