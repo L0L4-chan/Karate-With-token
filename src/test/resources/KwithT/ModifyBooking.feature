@@ -2,7 +2,7 @@ Feature: Modify booking
 
     Background:
     * call read('classpath:config.feature')
-    * url dom + '/booking/1?token0'+ token
+    * url dom + '/booking/'+bookingID +'?token0'+ token
 
     Scenario: Modify name on booking 
         * header Accept = '*/*'
