@@ -2,6 +2,7 @@ Feature: Get booking information
 
     Background:
     * call read('classpath:config.feature')
+    * call read('classpath:data.feature')
     * url dom + '/booking/' + bookingID
 
     Scenario: Get the booking reservation info through the booking ID

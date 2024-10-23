@@ -2,10 +2,10 @@ Feature: Login
 
     Background:
     * call read('classpath:config.feature')
-
+    * call read('classpath:data.feature')
     Scenario:Correct login
         Given url dom + '/auth'
-        And request { username: 'admin', password:'password123'}
+        And request correctUser
         When method post
         Then status 200
         And response.token != null

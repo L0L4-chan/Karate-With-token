@@ -12,6 +12,11 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
+    @Karate.Test
+    Karate testtryData() {
+        return Karate.run("testeo.feature").relativeTo(getClass());
+    }
+
      @Karate.Test
     Karate testPing() {
         return Karate.run("pingtoApi.feature").relativeTo(getClass());
@@ -56,5 +61,10 @@ public class AppTest
     @Karate.Test
     Karate testModifyBooking() {
         return Karate.run("ModifyBooking.feature").relativeTo(getClass());
+    }
+
+    @Karate.Test
+    Karate testIncompleteBooking() {
+        return Karate.run("postBookingIncompleteData.feature").relativeTo(getClass());
     }
 }

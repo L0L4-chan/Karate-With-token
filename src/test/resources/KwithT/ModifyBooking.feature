@@ -2,6 +2,7 @@ Feature: Modify booking
 
     Background:
     * call read('classpath:config.feature')
+    * call read('classpath:data.feature')
     * url dom + '/booking/'+bookingID +'?token0'+ token
 
     Scenario: Modify name on booking 
@@ -9,7 +10,7 @@ Feature: Modify booking
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 
         * header Authorization = auth
-        Given request {firstname: 'Jaes',lastname: 'Brown',totalprice: 111, depositpaid: true, bookingdates:{ checkin: '2018-01-01', checkout: '2019-01-01'},additionalneeds: 'Breakfast'}
+        Given request modifyUser
         When method put
         Then status 200
-        And response.firstname == 'Jaes'
+        And response.firstname == modifyUser.firstname

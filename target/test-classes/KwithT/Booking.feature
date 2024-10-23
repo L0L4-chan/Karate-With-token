@@ -2,12 +2,14 @@ Feature: Create a booking
 
     Background:
     * call read('classpath:config.feature')
+    * call read('classpath:data.feature')
     * url dom + '/booking'
 
     Scenario: Make a booking with full information
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 
-        Given request {firstname: 'Jim',lastname: 'Brown',totalprice: 111, depositpaid: true, bookingdates:{ checkin: '2018-01-01', checkout: '2019-01-01'},additionalneeds: 'Breakfast'}
+        * print bookingFullInfo
+        Given request bookingFullInfo
         When method post
         Then status 200
