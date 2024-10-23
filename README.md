@@ -3,7 +3,7 @@ This document outlines the process followed to work with Karate.
 
 ## Table of Contents
 1. [Installation](#Installation)
-2. [Test] (#Test)
+2. [Test](#Test)
 3. [Usage](#Usage)
 
 
