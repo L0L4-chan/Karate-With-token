@@ -3,7 +3,7 @@ Feature: Login
     Background:
     * call read('classpath:config.feature')
 
-    Scenario:Login
+    Scenario:Correct login
         Given url dom + '/auth'
         And request { username: 'admin', password:'password123'}
         When method post

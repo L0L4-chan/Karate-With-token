@@ -1,10 +1,10 @@
-Feature: Get a list of booking booking
+Feature: Get a list of booking 
 
     Background:
     * call read('classpath:config.feature')
     * url dom + '/booking'
 
-    Scenario: make a booking
+    Scenario: Get a list of all the booking on the DB
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 

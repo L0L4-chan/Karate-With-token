@@ -4,7 +4,7 @@ Feature: Create a booking
     * call read('classpath:config.feature')
     * url dom + '/booking'
 
-    Scenario: make a booking
+    Scenario: Make a booking with full information
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 
