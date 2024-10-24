@@ -1,11 +1,10 @@
 Feature: Login
 
     Background:
-    * call read('classpath:config.feature')
-    * call read('classpath:data.feature')
+    * def data = read('classpath:Data/user.json')
     Scenario:Correct login
         Given url dom + '/auth'
-        And request correctUser
+        And request data.correctUser
         When method post
         Then status 200
         And response.token != null

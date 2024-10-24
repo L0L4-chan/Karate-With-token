@@ -1,8 +1,8 @@
 Feature: Fail delete booking
 
     Background:
-    * call read('classpath:config.feature')
-    * url dom + '/booking/998'
+    
+    * url dom + '/booking/' + bookingID
 
     Scenario: Fail to delete booking due to lack of authorization 
         Given method delete

@@ -1,15 +1,14 @@
 Feature: Create a booking without all information 
 
     Background:
-    * call read('classpath:config.feature')
-    * call read('classpath:data.feature')
+    * def data = read('classpath:Data/booking.json')
     * url dom + '/booking'
 
     Scenario: Make a booking without name
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 
-        Given request bookingNoName
+        Given request data.bookingNoName
         When method post
         Then status 500
 
@@ -18,7 +17,7 @@ Feature: Create a booking without all information
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 
-        Given request bookingNoLast
+        Given request data.bookingNoLast
         When method post
         Then status 500
     
@@ -26,6 +25,6 @@ Feature: Create a booking without all information
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
         * header Connection = 'keep-alive' 
-        Given request bookingNoDates
+        Given request data.bookingNoDates
         When method post
         Then status 500

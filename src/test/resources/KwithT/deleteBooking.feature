@@ -1,7 +1,6 @@
 Feature: Delete booking
 
     Background:
-    * call read('classpath:config.feature')
     * url dom + '/booking/' + bookingID
 
     Scenario: Delete booking 

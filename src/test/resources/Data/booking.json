@@ -1,0 +1,50 @@
+{ 
+  "bookingFullInfo": { 
+    "firstname": "Jim", 
+    "lastname": "Brown", 
+    "totalprice": 111, 
+    "depositpaid": true, 
+    "bookingdates": { 
+      "checkin": "2018-01-01", 
+      "checkout": "2019-01-01" 
+    }, 
+    "additionalneeds": "Breakfast" 
+  },
+  "bookingNoName": { 
+    "lastname": "Brown", 
+    "totalprice": 111, 
+    "depositpaid": true, 
+    "bookingdates": { 
+      "checkin": "2018-01-01", 
+      "checkout": "2019-01-01" 
+    }, 
+    "additionalneeds": "Breakfast" 
+  },
+  "bookingNoLast": { 
+    "firstname": "Jim", 
+    "totalprice": 111, 
+    "depositpaid": true, 
+    "bookingdates": { 
+      "checkin": "2018-01-01", 
+      "checkout": "2019-01-01" 
+    }, 
+    "additionalneeds": "Breakfast" 
+  },
+  "bookingNoDates": { 
+    "firstname": "Jim", 
+    "lastname": "Brown", 
+    "totalprice": 111, 
+    "depositpaid": true, 
+    "additionalneeds": "Breakfast" 
+  },
+  "modifyUser": { 
+    "firstname": "Jaes", 
+    "lastname": "Brown", 
+    "totalprice": 111, 
+    "depositpaid": true, 
+    "bookingdates": { 
+      "checkin": "2018-01-01", 
+      "checkout": "2019-01-01" 
+    }, 
+    "additionalneeds": "Breakfast" 
+  }}

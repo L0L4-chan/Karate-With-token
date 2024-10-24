@@ -1,15 +1,14 @@
 Feature: Create a booking
 
     Background:
-    * call read('classpath:config.feature')
-    * call read('classpath:data.feature')
+    * def data = read('classpath:Data/booking.json')
     * url dom + '/booking'
 
     Scenario: Make a booking with full information
         * header Accept = '*/*'
         * header Accept-Encoding = 'gzip, deflate, br'
-        * header Connection = 'keep-alive' 
-        * print bookingFullInfo
-        Given request bookingFullInfo
+        * header Connection = 'keep-alive'  
+
+        Given request data.bookingFullInfo
         When method post
         Then status 200

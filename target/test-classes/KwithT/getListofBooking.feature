@@ -1,8 +1,8 @@
 Feature: Get a list of booking 
 
     Background:
-    * call read('classpath:config.feature')
-    * url dom + '/booking'
+    
+     * url dom + '/booking/'
 
     Scenario: Get a list of all the booking on the DB
         * header Accept = '*/*'

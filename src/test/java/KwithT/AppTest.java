@@ -1,10 +1,7 @@
 package KwithT;
 
 import com.intuit.karate.junit5.Karate;
-
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 /**
  * Unit test for simple App.
@@ -12,10 +9,6 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-    @Karate.Test
-    Karate testtryData() {
-        return Karate.run("testeo.feature").relativeTo(getClass());
-    }
 
      @Karate.Test
     Karate testPing() {
